@@ -1,10 +1,10 @@
 A. Ảnh chụp màn hình Kết quả (Trình duyệt Web): 
 
-![Ảnh A](./img/Buoi1_A.png)
-![Ảnh A](./img/Buoi1_A2.png)
+![Ảnh A](./imgs/Buoi1_A.png)
+![Ảnh A](./imgs/Buoi1_A2.png)
 
 B. Thông tin trích xuất: 
-![Ảnh A](./img/Buoi1_B.png)
+![Ảnh A](./imgs/Buoi1_B.png)
 
 1. Request URL: https://tlu.edu.vn/
 2. Request Method: GET
