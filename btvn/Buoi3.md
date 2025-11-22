@@ -64,6 +64,7 @@ if (isset($_SESSION['user'])) {
 } 
 ?>
 ```
-![alt text](b3-KQ.png)
+![ảnh kết quả](b3-KQ.png)
+
 
 Câu hỏi của tôi là: Trong đoạn mã login ở bài làm, mật khẩu đang được kiểm tra bằng cách so sánh trực tiếp với chuỗi plaintext. Nếu triển khai trong thực tế, cách làm này gây ra những rủi ro bảo mật nào, và cần thay thế bằng giải pháp nào để đảm bảo an toàn thông tin người dùng?
