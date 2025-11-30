@@ -96,4 +96,5 @@ $stmt_select = $pdo->query($sql_select);
 
 ## Câu hỏi Phản biện
 
-Tại sao có thể dùng foreach không và cách viết đó có ưu/nhược điểm gì so với cách dùng while ($row = $stmt_select->fetch())?
+Có thể dùng foreach để duyệt không và cách viết đó có ưu/nhược điểm gì so với cách dùng while ($row = $stmt_select->fetch())?
+
