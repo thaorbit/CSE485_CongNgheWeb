@@ -1,6 +1,6 @@
-## A. Code đã hoàn thiện:
+# A. Code đã hoàn thiện:
 
-# 1. models/SinhVienModel.php 
+## 1. models/SinhVienModel.php 
 
 ```
 <?php
@@ -22,7 +22,7 @@ function addSinhVien($pdo, $ten, $email) {
 ?>
 ```
 
-# 2. views/sinhvien_view.php 
+## 2. views/sinhvien_view.php 
 ```
 <!DOCTYPE html>
 <html lang="vi">
@@ -69,7 +69,7 @@ function addSinhVien($pdo, $ten, $email) {
 </html>
 ```
 
-# 3. index.php
+## 3. index.php
 
 ```
 <?php
@@ -125,4 +125,5 @@ include 'views/sinhvien_view.php';
 
 
 Trong code cũ (Chương 4), ta dùng vòng lặp while kết hợp với lệnh fetch() để lấy từng dòng dữ liệu từ đối tượng kết nối $stmt. Tuy nhiên, với cách viết Model hiện tại (hàm getAllSinhVien trả về fetchAll), tại sao chúng ta không thể sử dụng vòng lặp while trong View được nữa? Tại sao trong mô hình MVC, việc Model trả về một mảng dữ liệu tĩnh (Array) để View dùng foreach lại an toàn và đúng chuẩn hơn là việc truyền đối tượng kết nối sang View?
+
 
