@@ -1,6 +1,7 @@
-# A. Code đã hoàn thiện: 
+# Chương 6
+## A. Code đã hoàn thiện: 
 
-## 1. Toàn bộ code của tệp app/Http/Controllers/PageController.php. 
+### 1. Toàn bộ code của tệp app/Http/Controllers/PageController.php. 
 
 ```
 <?php
@@ -19,7 +20,7 @@ class PageController extends Controller
 }
 ```
 
-## 2. Toàn bộ code của tệp routes/web.php. 
+### 2. Toàn bộ code của tệp routes/web.php. 
 
 ```
 <?php
@@ -31,28 +32,28 @@ Route::get('/', [PageController::class, 'showHomepage']);
 Route::get('/about', [PageController::class, 'showHomepage']); 
 ```
 
-# B. Ảnh chụp màn hình Kết quả (3 ẢNH):
+## B. Ảnh chụp màn hình Kết quả (3 ẢNH):
 
-## 1. Ảnh 1 (Terminal): Chụp màn hình Terminal sau khi chạy lệnh php artisan make:controller PageController thành công.
+### 1. Ảnh 1 (Terminal): Chụp màn hình Terminal sau khi chạy lệnh php artisan make:controller PageController thành công.
 
 ![alt text](./imgs/C6_B1.png)
 
-## 2. Ảnh 2 (Terminal): Chụp màn hình Terminal đang chạy lệnh php artisan serve.  
+### 2. Ảnh 2 (Terminal): Chụp màn hình Terminal đang chạy lệnh php artisan serve.  
 
 ![alt text](./imgs/C6_B2.png)
 
-## 3. Ảnh 3 (Trình duyệt Web): 
+### 3. Ảnh 3 (Trình duyệt Web): 
 ![alt text](./imgs/C6_B3.png)
 
-## 4. Câu hỏi Phản biện 
+### 4. Câu hỏi Phản biện 
 
 Câu hỏi của tôi là: Trong bài thực hành, em đã sử dụng Route::get và tự đặt tên hàm xử lý là showHomepage thay vì các tên chuẩn mặc định (như index). Tại sao với chức năng 'Trang chủ', chúng ta lại ưu tiên cách định nghĩa thủ công này? Việc tự đặt tên hàm như vậy có giúp code dễ hiểu hơn so với việc cố ép vào khuôn mẫu có sẵn (như Resource Controller) không?
 
-#####
+# Chương 7
 
-A. Code đã hoàn thiện
+## A. Code đã hoàn thiện
 
-1. resources/views/layouts/app.blade.php 
+### 1. resources/views/layouts/app.blade.php 
 ```
 <!DOCTYPE html> 
 <html lang="vi"> 
@@ -92,7 +93,7 @@ center; }
 </html>
 ```
 
-2. resources/views/homepage.blade.php 
+### 2. resources/views/homepage.blade.php 
 ```
 @extends('layouts.app') 
 
@@ -110,7 +111,7 @@ center; }
 @endsection
 ```
 
-3. app/Http/Controllers/PageController.php 
+### 3. app/Http/Controllers/PageController.php 
 ```
 <?php 
 
@@ -144,19 +145,19 @@ class PageController extends Controller
 }
 ```
 
-B. Ảnh chụp màn hình Kết quả (Trình duyệt Web): Chạy php artisan serve và truy cập 
+## B. Ảnh chụp màn hình Kết quả (Trình duyệt Web): Chạy php artisan serve và truy cập 
 
 ![alt text](./imgs/C7.png)
 
-4. Câu hỏi Phản biện 
+## 4. Câu hỏi Phản biện 
 
 Câu hỏi của tôi là: Theo mô hình MVC, View chỉ nên chịu trách nhiệm hiển thị. Tuy nhiên, trong file homepage.blade.php, em vẫn phải dùng vòng lặp logic @foreach để duyệt mảng $tasks. Vậy ranh giới chính xác của việc 'xử lý logic' là ở đâu? Ví dụ: Nếu em muốn sắp xếp danh sách công việc theo thứ tự A-Z, em nên thực hiện việc sắp xếp đó ngay tại View (bằng code PHP/Blade) hay bắt buộc phải xử lý xong ở Controller rồi mới truyền sang?
 
-######
+# Chương 8
 
-# A. Code đã hoàn thiện: 
+## A. Code đã hoàn thiện: 
 
-## 1. Dán (paste) code hàm up() trong file Migration (..._create_sinh_viens_table.php). 
+### 1. Dán (paste) code hàm up() trong file Migration (..._create_sinh_viens_table.php). 
 
 ```
 <?php
@@ -191,7 +192,7 @@ return new class extends Migration
 
 ```
 
-## 2. Dán (paste) toàn bộ code file app/Models/SinhVien.php. 
+### 2. Dán (paste) toàn bộ code file app/Models/SinhVien.php. 
 
 ```
 <?php 
@@ -211,7 +212,7 @@ class SinhVien extends Model
 } 
 ```
 
-## 3. Dán (paste) toàn bộ code file app/Http/Controllers/SinhVienController.php. 
+### 3. Dán (paste) toàn bộ code file app/Http/Controllers/SinhVienController.php. 
 
 ```
 <?php 
@@ -254,7 +255,7 @@ class SinhVienController extends Controller
 }
 ```
 
-## 4. Dán (paste) code 2 route trong routes/web.php. 
+### 4. Dán (paste) code 2 route trong routes/web.php. 
 
 ```
 <?php
@@ -269,28 +270,25 @@ Route::get('/sinhvien', [SinhVienController::class, 'index'])->name('sinhvien.in
 Route::post('/sinhvien', [SinhVienController::class, 'store'])->name('sinhvien.store'); 
 
 ```
-# B. Ảnh chụp màn hình Kết quả (3 ẢNH):
+## B. Ảnh chụp màn hình Kết quả (3 ẢNH):
 
-## 1. Ảnh 1 (Terminal): Chụp màn hình Terminal sau khi chạy php artisan make:model ... -m  VÀ php artisan migrate thành công. 
+### 1. Ảnh 1 (Terminal): Chụp màn hình Terminal sau khi chạy php artisan make:model ... -m  VÀ php artisan migrate thành công. 
 ![alt text](./imgs/C8_B1.png)
 
-## 2. Ảnh 2 (phpMyAdmin): Chụp màn hình tab "Structure" (Cấu trúc) của bảng sinh_viens trong CSDL, cho thấy rõ các cột id, ten_sinh_vien, email, created_at. 
+### 2. Ảnh 2 (phpMyAdmin): Chụp màn hình tab "Structure" (Cấu trúc) của bảng sinh_viens trong CSDL, cho thấy rõ các cột id, ten_sinh_vien, email, created_at. 
 ![alt text](./imgs/C8_B2.png)
 
-## 3. Ảnh 3 (Trình duyệt Web): Chụp ảnh màn hình trang /sinhvien, sau khi đã dùng form thêm 1-2 sinh viên (chứng minh ::create() và ::all() đều hoạt động). 
+### 3. Ảnh 3 (Trình duyệt Web): Chụp ảnh màn hình trang /sinhvien, sau khi đã dùng form thêm 1-2 sinh viên (chứng minh ::create() và ::all() đều hoạt động). 
 ![alt text](./imgs/C8_B3.png)
 
-## 4. Câu hỏi Phản biện (Bắt buộc) 
+### 4. Câu hỏi Phản biện (Bắt buộc) 
 Tại phương thức store() trong SinhVienController, sau khi lưu dữ liệu thành công, tại sao chúng ta lại dùng return redirect()->route(...) để tải lại trang, thay vì dùng return view(...) để hiển thị danh sách ngay lập tức cho nhanh? Hành động redirect này giúp giải quyết vấn đề gì khi người dùng lỡ tay bấm F5 (Refresh) sau khi gửi form?
 
-#####
-Lỗi XSS: Do dùng {!! !!} để in dữ liệu (cho phép chạy mã Script độc hại).
-
-Lỗi CSRF: Do thiếu thẻ @csrf (sẽ bị lỗi 419 khi submit hoặc bị hacker giả mạo form).
+# Chương 9
 
 ## A. Code đã hoàn thiện: 
 
-# 1. Dán (paste) code của khối <form> trong tệp list.blade.php (chứng minh bạn đã thêm @csrf). 
+### 1. Dán (paste) code của khối <form> trong tệp list.blade.php (chứng minh bạn đã thêm @csrf). 
 ```
 <form action="{{ route('sinhvien.store') }}" method="POST">
             
@@ -309,7 +307,7 @@ Lỗi CSRF: Do thiếu thẻ @csrf (sẽ bị lỗi 419 khi submit hoặc bị h
             <button type="submit">Thêm sinh viên</button>
         </form>
 ```
-## 2. Dán (paste) code của khối @foreach trong tệp list.blade.php (chứng minh bạn dùng {{ }}). 
+### 2. Dán (paste) code của khối @foreach trong tệp list.blade.php (chứng minh bạn dùng {{ }}). 
 ```
  @foreach($danhSachSV as $sv)
     <tr>
@@ -320,14 +318,15 @@ Lỗi CSRF: Do thiếu thẻ @csrf (sẽ bị lỗi 419 khi submit hoặc bị h
     </tr>`
 @endforeach
 ```
-# B. Ảnh chụp màn hình Kết quả (BẮT BUỘC 2 ẢNH): 
-## 1. Ảnh 1 (Bằng chứng Chống CSRF): Tải trang /sinhvien, nhấn chuột phải $\rightarrow$ View Page Source (Xem nguồn trang). Chụp ảnh màn hình mã nguồn HTML, khoanh tròn vào thẻ <input type="hidden" name="_token" ...> mà @csrf đã tự động tạo ra. 
+## B. Ảnh chụp màn hình Kết quả (BẮT BUỘC 2 ẢNH): 
+
+### 1. Ảnh 1 (Bằng chứng Chống CSRF): Tải trang /sinhvien, nhấn chuột phải $\rightarrow$ View Page Source (Xem nguồn trang). Chụp ảnh màn hình mã nguồn HTML, khoanh tròn vào thẻ <input type="hidden" name="_token" ...> mà @csrf đã tự động tạo ra. 
 
 ![alt text](./imgs/C9_B1.png)
 
-## 2. Ảnh 2 (Bằng chứng Chống XSS): Chụp ảnh màn hình trang /sinhvien sau khi bạn đã thêm sinh viên ở (TODO 6 & 7). Ảnh phải cho thấy dòng chữ <script>alert('Ban da bi XSS!');</script> được in ra dưới dạng text trên bảng, chứ KHÔNG CÓ popup "alert" nào hiện lên. 
+### 2. Ảnh 2 (Bằng chứng Chống XSS): Chụp ảnh màn hình trang /sinhvien sau khi bạn đã thêm sinh viên ở (TODO 6 & 7). Ảnh phải cho thấy dòng chữ <script>alert('Ban da bi XSS!');</script> được in ra dưới dạng text trên bảng, chứ KHÔNG CÓ popup "alert" nào hiện lên. 
 ![alt text](./imgs/C9_B2.png)
 
-# 4. Câu hỏi Phản biện (Bắt buộc) 
- 
+## 4. Câu hỏi Phản biện (Bắt buộc) 
+
 Câu hỏi của tôi là: Nếu giá trị token 762NFF... hiển thị rõ ràng trong mã nguồn (View Source) như thế này, thì hacker cũng có thể vào xem và copy chuỗi này dán vào form giả mạo của hắn. Vậy tại sao cơ chế này vẫn bảo vệ được website? Phải chăng token này còn được liên kết bí mật với một yếu tố nào đó phía Server (Session) mà hacker không thể giả mạo được?
